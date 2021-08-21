@@ -1,0 +1,65 @@
+@import "variables";
+
+
+.about-section {
+    width: 100%;
+    max-width: $max-width;
+    margin: auto;
+    margin-top: $nav-bar-height;
+    padding: 5rem;
+    // border: 1px solid red;
+   
+}
+
+.about-description{
+    display: flex;
+    align-items: center;
+}
+.about-img {
+    width: 33%;
+   
+}
+.about-text {
+    width: 66%;
+     padding: 3rem;
+
+     h1{
+         margin-bottom: 1rem;
+     }
+     p{
+         margin-top: 1rem;
+     }
+}
+
+
+
+.form-section {
+    width: 100%;
+    height: 90vh;
+    background-color: $custom-black;
+    h1{
+        color: $custom-white;
+        text-align: center;
+    }
+}
+
+.contact-form {
+    label {
+        color: $custom-white;
+    }
+    input,textarea {
+        margin-bottom: 2rem;
+        height: 30px;
+    }
+    textarea{
+        height: 300px;
+    }
+    margin: auto;
+    border: 1px solid white;
+    width: 700px;
+    height: 500px;
+    padding: 3rem;
+    max-width: $max-width;
+    display: flex;
+    flex-direction: column;
+}
