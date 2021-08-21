@@ -19,7 +19,8 @@ html:focus-within {
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
-ol[role='list'] {
+ol[role='list'],
+li {
   list-style: none;
 }
 
@@ -129,18 +130,19 @@ p {
 
 .form-section {
   width: 100%;
-  height: 90vh;
+  height: 100%;
   background-color: #0D0D0D;
+  padding: 2rem;
 }
 
 .form-section h1 {
   color: white;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .contact-form {
   margin: auto;
-  border: 1px solid white;
   width: 700px;
   height: 500px;
   padding: 3rem;
@@ -161,6 +163,8 @@ p {
 .contact-form input, .contact-form textarea {
   margin-bottom: 2rem;
   height: 30px;
+  padding: 1rem;
+  font-family: inherit;
 }
 
 .contact-form textarea {
@@ -222,43 +226,6 @@ footer {
 }
 
 @media (min-width: 950px) {
-  .email-container {
-    background-image: url("/images/email-bg.svg");
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .email-text {
-    width: 50%;
-    margin: auto;
-    text-align: center;
-  }
-  .email-text p {
-    text-transform: uppercase;
-  }
-  .email-form {
-    width: 50%;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-bottom: 2rem;
-  }
-  .email-form input {
-    width: 60%;
-    position: static;
-    text-align: left;
-  }
-  .email-form .btn {
-    position: static;
-    -webkit-transform: none;
-            transform: none;
-    margin: 0;
-    margin-left: 2rem;
-  }
   .footer-top {
     height: 20vh;
     display: -webkit-box;
@@ -307,9 +274,20 @@ footer {
     cursor: pointer;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
+    font-size: 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .icon:hover {
     background-color: white;
+    color: #0D0D0D;
   }
 }
 
@@ -332,6 +310,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 5rem;
+}
+
+.nav-white-bg {
+  background-color: white;
 }
 
 .title {
@@ -421,5 +403,13 @@ body {
 .project-three {
   top: 150vh;
   left: 40vw;
+}
+
+.right-click-menu {
+  position: fixed;
+  width: 200px;
+  height: 130px;
+  background-color: #ffffff;
+  visibility: hidden;
 }
 /*# sourceMappingURL=main.css.map */

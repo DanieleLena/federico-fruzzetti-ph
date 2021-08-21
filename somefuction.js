@@ -1,21 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
- let splide = new Splide(".splide", {
-   pauseOnHover: "false",
-   rewind: "true",
-   type: 'fade',
-   autoplay: "true",
-   interval: 5000,
-   pauseOnFocus: "false",
-   arrows: "false",
- });
-  
-  splide.mount();
+const images = document.querySelectorAll(".lazy-load");
+
+const config = {
+  rootMargin: "-300px 0px",
+  threshold: 0.01,
+};
+
+// The observer for the images on the page
+let observer = new IntersectionObserver(onIntersection, config);
+images.forEach((image) => {
+  observer.observe(image);
 });
 
+function onIntersection(entries) {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      observer.unobserve(entry.target);
+      preloadImage(entry.target.dataset.src, entry.target);
+    }
+  });
+}
+function preloadImage(url, target) {
+  target.setAttribute("src", url);
+
+  target.addEventListener("load", () => {
+    target.classList.add("fadein-animation");
+    console.log("caricata");
+  });
+}
 
 // CUSTOM RIGHT CLICK MENU =================================================
 
-const images = document.querySelectorAll(".image");
 const menu = document.querySelector(".right-click-menu");
 
 images.forEach((image) => {

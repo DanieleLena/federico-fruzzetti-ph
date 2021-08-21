@@ -53,41 +53,6 @@ margin-bottom: 2rem;
 @media (min-width:950px) {
 
 
-    .email-container {
-        background-image: url("/images/email-bg.svg");
-        width: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .email-text {
-        width: 50%;
-        margin: auto;
-        text-align: center;
-
-        p {
-            text-transform: uppercase;
-        }
-    }
-    .email-form {
-        width: 50%;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 2rem;
-
-        input {
-            width: 60%;
-            position: static;
-            text-align: left;
-        }
-        .btn {
-            position: static;
-            transform: none;
-            margin: 0;
-            margin-left: 2rem;
-        }
-    }
-
     .footer-top {
         height: 20vh;
         display: flex;
@@ -119,9 +84,14 @@ margin-bottom: 2rem;
 .icon {
     cursor: pointer;
     transition: .3s ease-in-out;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
     .icon:hover {
         background-color: white;
+        color: $custom-black;
     
 }
 }

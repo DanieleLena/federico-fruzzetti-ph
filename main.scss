@@ -25,6 +25,10 @@ body {
     padding: 0 5rem;
 
 }
+//applied in the about page
+.nav-white-bg {
+    background-color: $custom-white;
+}
 .title {
     line-height: 1rem;
     text-align: center;
@@ -106,4 +110,13 @@ body {
     left: 40vw;
     // height: 300px;
     // width: 300px;
+}
+
+.right-click-menu {
+  position: fixed;
+  width: 200px;
+  height: 130px;
+  background-color: #ffffff;
+  visibility: hidden;
+ 
 }
