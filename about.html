@@ -16,21 +16,39 @@ crossorigin="anonymous">
     <title>Federico Fruzzetti | Chi sono</title>
 </head>
 <body>
-      <nav class="nav nav-white-bg">
+        <!-- NAV BAR ============ -->
+    <nav class="nav">
       <div class="title">
-              <a href="index.html"><h2>Federico <br>Fruzzetti PH.</h2></a>
+        <a href="index.html"
+          ><h2>Federico <br />Fruzzetti PH.</h2></a
+        >
       </div>
-     
+
       <ul class="nav-list">
         <li><a class="btn" href="projects.html">Progetti</a></li>
-        <li><a class="btn" href="">Chi sono</a></li>
+        <li><a class="btn" href="about.html">Chi sono</a></li>
         <li><a class="btn" href="#">Contatti</a></li>
-
       </ul>
-      <div class="shop-icon">
-<i class="fas fa-shopping-cart"></i>
+      <div class="nav-icon">
+        <i class="shop-icon fas fa-shopping-cart"></i>
+        <i class="burger-icon fas fa-bars active"></i>
       </div>
     </nav>
+    <!-- NAV BAR ============ -->
+    <!-- MOBILE MENU ======== -->
+    <div class="mobile-menu">
+      <ul class="mobile-list">
+        <li><a class="mobile-link" href="projects.html">Progetti</a></li>
+        <li><a class="mobile-link" href="about.html">Chi sono</a></li>
+        <li><a class="mobile-link" href="#">Contatti</a></li>
+      </ul>
+      <div class="mobile-icon-container">
+        <div class="mobile-link icon"><i class="fab fa-instagram"></i></div>
+      <div class="mobile-link icon"><i class="far fa-envelope"></i></div>
+      </div>
+      
+    </div>
+    <!-- MOBILE MENU ======== -->
 
     <section class="about-section">
         <div class="about-description">
@@ -78,6 +96,8 @@ crossorigin="anonymous">
     </div>
 </footer>
   <!-- FOOTER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="./app.js"></script>
 
 </body>
 </html>
