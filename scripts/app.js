@@ -1,3 +1,6 @@
+
+// SPLIDE CAROUSEL ===================================
+
 document.addEventListener("DOMContentLoaded", function () {
  let splide = new Splide(".splide", {
    pauseOnHover: "false",
@@ -13,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// CUSTOM RIGHT CLICK MENU =================================================
+// CUSTOM RIGHT CLICK MENU ===============================
 
 const images = document.querySelectorAll(".image");
 const menu = document.querySelector(".right-click-menu");
@@ -62,10 +65,42 @@ function openMenu(x, y) {
   menu.style.visibility = "visible";
 }
 
+// LIGHTBOX GALLERY ===========================================
 
-var lightbox = new SimpleLightbox(".right-column a", {
+var lightbox = new SimpleLightbox(".prova a", {
   /* options */
+  spinner: true,
+  disableRightClick: true,
 });
 
-console.log(lightbox);
+//LAZY LOADING WITH IntersectionObserver ======================
 
+const config = {
+  rootMargin: "-300px 0px",
+  threshold: 0.01,
+};
+
+// The observer for the images on the page
+let observer = new IntersectionObserver(onIntersection, config);
+console.log(observer);
+
+images.forEach((image) => {
+  observer.observe(image);
+});
+
+function onIntersection(entries) {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      observer.unobserve(entry.target);
+      preloadImage(entry.target.dataset.srcset, entry.target);
+    }
+  });
+}
+function preloadImage(url, target) {
+  target.setAttribute("srcset", url);
+
+  target.addEventListener("load", () => {
+    target.classList.add("fadein-animation");
+    console.log("caricata");
+  });
+}

@@ -124,6 +124,8 @@ body {
     display: flex;
     justify-content: flex-end;
     cursor: pointer;
+//FOR FADE-IN ANIMATION
+    opacity: 0;
   }
 }
 .left-column{
@@ -133,25 +135,6 @@ body {
   padding-left:60px;
 }
 
-// .project-one {
-//   top: 20vh;
-//   left: 15vw;
-//   // height: 90vh;
-//   //     width: 500px;
-// }
-// .project-two {
-//   top: 30vh;
-//   left: 50vw;
-//   //    width : 450px;
-//   //     height: 300px;
-// }
-
-// .project-three {
-//   top: 150vh;
-//   left: 40vw;
-//   // height: 300px;
-//   // width: 300px;
-// }
 
 .right-click-menu {
   position: fixed;
@@ -163,7 +146,19 @@ body {
 
 
 
+.fadein-animation {
+  animation: fadein 1s linear forwards;
+}
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: $mq-small) {
+  .nav {
+    background-color: $custom-white;
+  }
     .nav-list{
         display: none;
     }

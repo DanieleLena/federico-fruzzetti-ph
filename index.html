@@ -91,24 +91,30 @@
         <h1>Progetti</h1>
         <div class="flex-container">
           <div class="left-column">
+            <a href="./images/large.jpg">
             <img
-              src="./images/small.jpg"
-              srcset="
+              data-srcset="
                 ./images/small.jpg  1000w,
                 ./images/medium.jpg 1500w,
                 ./images/large.jpg  2000w
               "
             />
-            <img class="image" src="./images/ff5.jpg" />
-            <img class="image" src="./images/ff2.jpg" />
-            <img class="image" src="./images/ff2.jpg" />
+            </a>
+            <a href="./images/ff5.jpg">
+            <img class="image" data-srcset="./images/ff5.jpg" />
+            </a>
+            <img class="image" data-srcset="./images/ff2.jpg" />
+            <img class="image" data-srcset="./images/ff2.jpg" />
           </div>
           <div class="right-column">
-            <a href="./images/large.jpg">
-            <img class="image" src="./images/ff2.jpg" />
+            <a href="./images/very-large.jpg">
+            <img class="image" data-srcset="./images/ff2.jpg" />
             </a>
             <a href="./images/ff-profile.jpg">
-            <img class="image" src="./images/ff1.jpg" />
+            <img class="image" data-srcset="./images/ff1.jpg" />
+            </a>
+             <a href="./images/ff-profile.jpg">
+            <img class="image" data-srcset="./images/medium.jpg" />
             </a>
           </div>
         </div>
@@ -146,7 +152,6 @@
       </p>
       <button>Contact</button>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script>"https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.0.2/simpleLightbox.min.js"</script>

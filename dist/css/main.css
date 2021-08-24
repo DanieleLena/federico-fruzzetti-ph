@@ -434,6 +434,7 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   cursor: pointer;
+  opacity: 0;
 }
 
 .left-column {
@@ -452,7 +453,27 @@ body {
   visibility: hidden;
 }
 
+.fadein-animation {
+  -webkit-animation: fadein 1s linear forwards;
+          animation: fadein 1s linear forwards;
+}
+
+@-webkit-keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
+  .nav {
+    background-color: white;
+  }
   .nav-list {
     display: none;
   }
