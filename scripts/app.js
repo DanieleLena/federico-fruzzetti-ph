@@ -63,41 +63,9 @@ function openMenu(x, y) {
 }
 
 
-//animation
+var lightbox = new SimpleLightbox(".right-column a", {
+  /* options */
+});
 
-const burgerBtn = document.querySelector(".burger-icon");
-const tl = gsap.timeline({paused:true});
+console.log(lightbox);
 
-function openNav() {
-  animateOpenNav();
-  
-  burgerBtn.onclick = function (e) {
-    // Toggle reversed to it's opposite value
-    tl.reversed(!tl.reversed());
-    // Use the toggle method in the classList API
-    document.body.classList.toggle("disable-scrolling");
-  };
-}
-function animateOpenNav() {
-  tl.to(".mobile-menu", {
-    onStart() {
-      console.log('ciao cazzoni');
-    },
-    duration: .3,
-    ease: "power3.out",
-  }).to(".mobile-menu", {
-    duration: .3,
-    ease: "power3.out",
-    opacity: .9
-  }).to(".mobile-link", {
-    opacity: 1,
-    duration: 1,
-    stagger: {
-      each: 0.1,
-      ease: "power1.in"
-    }
-  })
-  .reverse(); 
-}
-
-openNav();
