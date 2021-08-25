@@ -2,6 +2,7 @@
 @import "reset";
 @import "typography";
 @import "about";
+@import "projects";
 @import "footer";
 
 body {
@@ -102,10 +103,9 @@ body {
 .prova {
   width: 100%;
   background-color: $custom-white;
+  // background-color: #3084a33f;
   padding: 5rem;
 
-  // background-color: #EFEFEF ;
-  border: 1px solid red;
 
   h1 {
     text-align: center;
