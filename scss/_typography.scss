@@ -39,6 +39,34 @@ h4 {
 p {
   font-size: 1.2rem;
   font-weight: 500;
-  line-height: 1.5rem;
+  line-height: 1.9rem;
   letter-spacing: -0.025rem;
+}
+
+
+.btn {
+  background: transparent;
+  color: $custom-white;
+  border: 1px solid $custom-white;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: auto;
+  transition: background-color .3s ease-in-out;
+    &:hover {
+    background-color: $custom-white;
+    color: $custom-black;
+
+  }
+}
+.btn-black {
+  color: $custom-black;
+  border-color: $custom-black;
+
+  &:hover {
+    background-color: $custom-black;
+    color: $custom-white;
+
+  }
 }

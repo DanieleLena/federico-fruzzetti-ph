@@ -3,6 +3,7 @@
 @import "typography";
 @import "about";
 @import "projects";
+@import "singleProject";
 @import "footer";
 
 body {
@@ -17,7 +18,7 @@ body {
   z-index: 999;
   background-color: transparent;
   width: 100%;
-  height: 60px;
+  height: $nav-bar-height;
   display: flex;
   justify-content: space-between;
   // border-bottom: 1px solid black;
@@ -44,6 +45,11 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  &:hover{
+    color: $hover-color;
+
+  }
 }
 .nav-list {
   position: relative;
@@ -56,16 +62,20 @@ body {
     list-style: none;
     text-transform: uppercase;
     padding: 0 2rem;
+    &:hover {
+          color: $hover-color
+
+    }
   }
   li:after {
     content: "";
     position: absolute;
     top: 100%;
     left: 0;
-    height: 2px;
+    // height: 2px;
     width: 100%;
     height: 0.1em;
-    background-color: $custom-black;
+    background-color: $hover-color;
     opacity: 0;
     transition: opacity 400ms, transform 400ms;
     opacity: 1;
@@ -75,11 +85,14 @@ body {
 
   a:hover::after,
   a:focus::after {
-    transform: scale(1);
+
+    transform: scale(.8);
   }
 
   li:hover::after {
-    transform: scale(1);
+        
+
+    transform: scale(.8);
   }
 }
 .nav-icon {
@@ -153,10 +166,23 @@ box-shadow: 9px 5px 15px 6px rgba(0,0,0,0.82);
 
 .right-click-menu {
   position: fixed;
-  width: 200px;
-  height: 130px;
+  width: 300px;
+  // height: 130px;
+  padding: 2rem;
   background-color: #ffffff;
   visibility: hidden;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  
+  p {
+    margin-bottom: 1rem;
+  }
+ 
+}
+.btn-menu-container{
+  display: flex;
+  justify-content: space-around;
 }
 
 .fadein-animation {

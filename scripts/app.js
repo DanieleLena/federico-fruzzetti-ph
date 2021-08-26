@@ -35,7 +35,8 @@ images.forEach((image) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target !== menu) {
+  
+  if (e.target.parentNode !== menu) {
     menu.style.visibility = "hidden";
   }
 });

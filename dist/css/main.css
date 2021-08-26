@@ -90,15 +90,43 @@ h4 {
 p {
   font-size: 1.2rem;
   font-weight: 500;
-  line-height: 1.5rem;
+  line-height: 1.9rem;
   letter-spacing: -0.025rem;
+}
+
+.btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: auto;
+  -webkit-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #0D0D0D;
+}
+
+.btn-black {
+  color: #0D0D0D;
+  border-color: #0D0D0D;
+}
+
+.btn-black:hover {
+  background-color: #0D0D0D;
+  color: white;
 }
 
 .about-section {
   width: 100%;
   max-width: 1100px;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 50px;
   padding: 5rem;
 }
 
@@ -173,30 +201,13 @@ p {
 
 .projects-section {
   margin-top: calc(60px + 20px);
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   width: 100vw;
 }
 
 .projects-section h1 {
   text-align: center;
   text-transform: uppercase;
-}
-
-.project {
-  -webkit-box-shadow: 9px 5px 15px -5px rgba(0, 0, 0, 0.82);
-          box-shadow: 9px 5px 15px -5px rgba(0, 0, 0, 0.82);
-  cursor: pointer;
-  width: 100%;
-  background-color: #161010;
-  height: 100%;
-  min-height: 400px;
-  max-height: 400px;
-  overflow: hidden;
-}
-
-.project img {
-  width: 100%;
-  height: 100%;
 }
 
 .grid {
@@ -260,7 +271,7 @@ p {
 
 /* Anchor will cover the whole item by default */
 .grid figure figcaption > a {
-  z-index: 1000;
+  z-index: 998;
   text-indent: 200%;
   white-space: nowrap;
   font-size: 0;
@@ -394,6 +405,52 @@ figure.effect-lily:hover p {
   }
 }
 
+.project-body {
+  padding: 5rem;
+  margin: 50px auto 0 auto;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.project-body h1 {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.project-body img {
+  max-width: 100%;
+  margin-bottom: 5rem;
+}
+
+.project-title {
+  margin: auto;
+  position: relative;
+  margin-bottom: 3rem;
+  width: 40%;
+  max-width: 600px;
+}
+
+.project-title h1:after {
+  content: '';
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background-color: #0D0D0D;
+}
+
+.side-by-side {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 footer {
   display: block;
   width: 100%;
@@ -515,7 +572,7 @@ body {
   z-index: 999;
   background-color: transparent;
   width: 100%;
-  height: 60px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -558,6 +615,10 @@ body {
   cursor: pointer;
 }
 
+.title:hover {
+  color: rgba(0, 0, 0, 0.808);
+}
+
 .nav-list {
   position: relative;
   left: -3%;
@@ -577,15 +638,18 @@ body {
   padding: 0 2rem;
 }
 
+.nav-list li:hover {
+  color: rgba(0, 0, 0, 0.808);
+}
+
 .nav-list li:after {
   content: "";
   position: absolute;
   top: 100%;
   left: 0;
-  height: 2px;
   width: 100%;
   height: 0.1em;
-  background-color: #0D0D0D;
+  background-color: rgba(0, 0, 0, 0.808);
   opacity: 0;
   -webkit-transition: opacity 400ms, -webkit-transform 400ms;
   transition: opacity 400ms, -webkit-transform 400ms;
@@ -600,13 +664,13 @@ body {
 
 .nav-list a:hover::after,
 .nav-list a:focus::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .nav-list li:hover::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .nav-icon {
@@ -693,10 +757,31 @@ body {
 
 .right-click-menu {
   position: fixed;
-  width: 200px;
-  height: 130px;
+  width: 300px;
+  padding: 2rem;
   background-color: #ffffff;
   visibility: hidden;
+  -webkit-box-shadow: 9px 5px 15px -5px rgba(0, 0, 0, 0.82);
+          box-shadow: 9px 5px 15px -5px rgba(0, 0, 0, 0.82);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.right-click-menu p {
+  margin-bottom: 1rem;
+}
+
+.btn-menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .fadein-animation {
@@ -745,7 +830,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: black;
-    top: 60px;
+    top: 50px;
     opacity: 0;
     z-index: 1000;
     padding-bottom: 25rem;
