@@ -40,11 +40,21 @@ body {
 }
 .title {
   line-height: 1rem;
-  text-align: center;
+  text-align: left;
   height: 100%;
   display: flex;
   align-items: center;
   cursor: pointer;
+position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+  width: 2px;
+  height: 40px;
+  top: 3px;
+  left: -5px;
+  background: $custom-black;
+  }
 
   &:hover{
     color: $hover-color;
@@ -60,7 +70,7 @@ body {
     position: relative;
     font-size: 2rem;
     list-style: none;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     padding: 0 2rem;
     &:hover {
           color: $hover-color

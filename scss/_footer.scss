@@ -1,90 +1,95 @@
 footer {
-    display: block;
-    width: 100%;
-    padding: 0 5rem;
-    margin: auto;
-    color: white;
-     text-align: center;
-     background-color: $custom-black;
+  display: block;
+  width: 100%;
+  padding: 0 5rem;
+  margin: auto;
+  color: white;
+  text-align: center;
+  background-color: $custom-black;
 }
 
-.footer-top { 
-  
-    padding-top: 2rem;
-    margin-bottom: 2rem;
+.footer-top {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
 
-    ul {
-        // font-family: $north-font;
-        font-size: 1rem;
-    }
-    li {
-        margin-bottom: 1rem;
-    }
-
+  ul {
+    // font-family: $north-font;
+    font-size: 1rem;
+  }
+  li {
+    margin-bottom: 1rem;
+  }
 }
 
 .icons-container {
-display: flex;
-justify-content: center;
-gap: 1rem;
-margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 .icon {
-    width: 50px;
-    height:50px;
-    border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 
-    background-color: #585757;
-    background-repeat: no-repeat;
-    background-position: center;
-
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
 
 // MEDIA QUERY ======================================================================
 
-@media (min-width:950px) {
-
-
-    .footer-top {
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.274);
-        ul {
-                   display: flex;
-                   gap: 1rem;
-                   justify-content: center;
-                   align-items: center;
-                   cursor: pointer;
-        }
-
-        li:hover {
-            border-bottom: 2px solid white;
-        }
+@media (min-width: 950px) {
+  .footer-top {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.274);
+    ul {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
     }
-    .footer-bottom {
-        height: 20vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
-        h2 {
-            cursor: pointer;
-        }
+    li:hover {
+      border-bottom: 2px solid white;
     }
-.icon {
+  }
+  .footer-bottom {
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      cursor: pointer;
+      text-align: left;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 40px;
+        top: 1px;
+        left: -5px;
+        background: $custom-white;
+      }
+    }
+  }
+  .icon {
     cursor: pointer;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
     font-size: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-    .icon:hover {
-        background-color: white;
-        color: $custom-black;
-    
-}
+    background-color: transparent;
+  }
+  .icon:hover {
+    background-color: white;
+    color: $custom-black;
+  }
 }
