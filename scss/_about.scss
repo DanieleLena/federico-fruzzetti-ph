@@ -2,7 +2,7 @@
 
 
 .about-section {
-    width: 100%;
+    // max-width: 1000px;;
     max-width: $max-width;
     margin: auto;
     margin-top: $nav-bar-height;
@@ -60,10 +60,37 @@
     }
     margin: auto;
     // border: 1px solid white;
-    width: 700px;
+    max-width: $max-width;
     height: 500px;
     padding: 3rem;
     max-width: $max-width;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: $mq-small) {
+    .about-section{
+        padding: 0rem;
+    }
+    .about-description {
+        flex-direction: column;
+    }
+   .about-text{
+       width: 100%;
+       padding: 1rem;
+       margin-bottom: 2rem;
+   }
+   .form-section{
+       padding: 0;
+       h1 {
+                  padding-top: 2rem;
+
+       }
+   }
+   .contact-form{
+       padding: 1rem;
+   }
+   .contact-form {
+       width: 100%;
+   }
 }

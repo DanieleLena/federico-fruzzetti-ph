@@ -3,13 +3,12 @@
 
 document.addEventListener("DOMContentLoaded", function () {
  let splide = new Splide(".splide", {
-   pauseOnHover: "false",
-   rewind: "true",
-   type: 'fade',
-   autoplay: "true",
-   interval: 5000,
-   pauseOnFocus: "false",
-   arrows: "false",
+   rewind: true,
+   type: "fade",
+   autoplay: true,
+   pauseOnHover: false,
+   interval: 4000,
+   arrows: false,
  });
   
   splide.mount();
@@ -83,7 +82,6 @@ const config = {
 
 // The observer for the images on the page
 let observer = new IntersectionObserver(onIntersection, config);
-console.log(observer);
 
 images.forEach((image) => {
   observer.observe(image);
@@ -102,7 +100,6 @@ function preloadImage(url, target) {
 
   target.addEventListener("load", () => {
     target.classList.add("fadein-animation");
-    console.log("caricata");
   });
 }
 

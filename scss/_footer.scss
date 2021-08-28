@@ -1,3 +1,5 @@
+@import "variables";
+
 footer {
   display: block;
   width: 100%;
@@ -39,9 +41,10 @@ footer {
 
 // MEDIA QUERY ======================================================================
 
-@media (min-width: 950px) {
+@media (min-width: $mq-medium) {
   .footer-top {
     height: 20vh;
+    max-height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +63,7 @@ footer {
   }
   .footer-bottom {
     height: 20vh;
+    max-height: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
