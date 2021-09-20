@@ -104,11 +104,20 @@ position: relative;
     transform: scale(.8);
   }
 }
-.nav-icon {
+.nav-icon-container {
   height: 100%;
   display: flex;
   align-items: center;
   font-size: 2rem;
+}
+.nav-icon {
+  font-size: 2.5rem;
+  margin: 0 1rem; 
+  
+  &:hover{
+    color: $hover-color;
+
+  }
 }
 .burger-icon {
   display: none !important;
@@ -214,11 +223,12 @@ grid-gap: $padding-page;
   .nav-list {
     display: none;
   }
-  .shop-icon {
+
+  .nav-icon {
     display: none !important;
   }
   .burger-icon {
-    display: block !important;
+    display: inline-block !important;
     z-index: 999;
   }
   .mobile-menu {
