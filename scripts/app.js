@@ -67,7 +67,7 @@ function openMenu(x, y) {
 
 // LIGHTBOX GALLERY ===========================================
 
-var lightbox = new SimpleLightbox(".prova a", {
+var lightbox = new SimpleLightbox(".main-container a", {
   /* options */
   spinner: true,
   disableRightClick: true,

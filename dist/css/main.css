@@ -737,7 +737,7 @@ body {
 }
 
 .nav-icon {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin: 0 1rem;
 }
 
@@ -750,17 +750,17 @@ body {
 }
 
 .img-carousel {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
 }
 
-.prova {
+.main-container {
   width: 100%;
   background-color: white;
   padding: 5rem;
 }
 
-.prova h1 {
+.main-container h1 {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 5rem;
@@ -795,6 +795,19 @@ body {
 .images-row img:hover {
   -webkit-box-shadow: 9px 5px 15px 4px rgba(0, 0, 0, 0.82);
           box-shadow: 9px 5px 15px 4px rgba(0, 0, 0, 0.82);
+}
+
+.full-width {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.opposite {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .images-vertical {
@@ -936,6 +949,9 @@ body {
   }
   .disable-scrolling {
     overflow: hidden;
+  }
+  .main-container {
+    padding: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

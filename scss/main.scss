@@ -111,7 +111,7 @@ position: relative;
   font-size: 2rem;
 }
 .nav-icon {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin: 0 1rem; 
   
   &:hover{
@@ -124,10 +124,11 @@ position: relative;
 }
 
 .img-carousel {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  // height: 100vh;
+  max-height: 100vh;
 }
-.prova {
+.main-container {
   width: 100%;
   background-color: $custom-white;
   // background-color: #3084a33f;
@@ -149,7 +150,6 @@ position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: $padding-page;
-  
 
   img {
     z-index: 10;
@@ -167,6 +167,12 @@ position: relative;
 box-shadow: 9px 5px 15px 4px rgba(0,0,0,0.82);
     }
   }
+}
+.full-width{
+  justify-content: center;
+}
+.opposite{
+  flex-direction: row-reverse;
 }
 .images-vertical {
   width: 48.5%;
@@ -281,5 +287,9 @@ grid-gap: $padding-page;
   }
   .disable-scrolling {
     overflow: hidden;
+  }
+
+  .main-container{
+    padding: 1rem;
   }
 }
