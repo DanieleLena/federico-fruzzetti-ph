@@ -20,13 +20,13 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <link rel="icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="icon" href="/images/favicon-32x32.png" type="image/x-icon" />
 
     <title>Federico Fruzzetti | Chi sono</title>
   </head>
   <body>
     <!-- NAV BAR ============ -->
- <nav class="nav">
+    <nav class="nav">
       <div class="title">
         <a href="index.html"
           ><h2>Federico <br />Fruzzetti</h2></a
@@ -39,8 +39,12 @@
         <li><a href="projects.html">Progetti</a></li>
       </ul>
       <div class="nav-icon-container">
-       <a href="https://www.instagram.com/ff98_ph/" target="_blank"> <i class="nav-icon fab fa-instagram"></i></a>
-       <a href="mailto:federicofruzzettiph@gmail.com"> <i class="nav-icon far fa-envelope"></i></a>
+        <a href="https://www.instagram.com/ff98_ph/" target="_blank">
+          <i class="nav-icon fab fa-instagram"></i
+        ></a>
+        <a href="mailto:federicofruzzettiph@gmail.com">
+          <i class="nav-icon far fa-envelope"></i
+        ></a>
         <i class="burger-icon fas fa-bars active"></i>
       </div>
     </nav>
@@ -53,8 +57,16 @@
         <li><a class="mobile-link" href="projects.html">Progetti</a></li>
       </ul>
       <div class="mobile-icon-container">
-        <div class="mobile-link icon"> <a href="https://www.instagram.com/ff98_ph/" target="_blank"><i class="fab fa-instagram"></i></a></div>
-        <div class="mobile-link icon"><a href="mailto:federicofruzzettiph@gmail.com"> <i class="far fa-envelope"></i></a></div>
+        <div class="mobile-link icon">
+          <a href="https://www.instagram.com/ff98_ph/" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+        <div class="mobile-link icon">
+          <a href="mailto:federicofruzzettiph@gmail.com">
+            <i class="far fa-envelope"></i
+          ></a>
+        </div>
       </div>
     </div>
     <!-- MOBILE MENU ======== -->
@@ -62,28 +74,39 @@
     <section class="about-section">
       <div class="about-description">
         <div class="about-image">
-          <img src="https://res.cloudinary.com/dhaypef1z/image/upload/v1632146404/FedericoFruzzettiPH/Contatti/Federico_Fruzzetti_PH_Fotografo_argufa.jpg" width="400px" alt="Federico Fruzzetti" />
+          <img
+            src="https://res.cloudinary.com/dhaypef1z/image/upload/v1632146404/FedericoFruzzettiPH/Contatti/Federico_Fruzzetti_PH_Fotografo_argufa.jpg"
+            width="400px"
+            alt="Federico Fruzzetti"
+          />
         </div>
         <article class="about-text">
           <h1>Ciao, sono Federico</h1>
           <p>
-            Mi chiamo Federico Fruzzetti e sono nato a Lucca (Toscana). Sono sempre stato attratto dalla fotografia e cosi, durante l'adolescenza inizio a fotografare, spinto sopratutto dalla volontà di esprimermi. Questa mia passione mi ha portato a frequentare la triennale di Fotografia a Firenze (LABA) e a capire che non voglio solo esprimermi, ma anche cercare di raccontare il mondo che ci circonda.
+            Mi chiamo Federico Fruzzetti e sono nato a Lucca (Toscana). Sono
+            sempre stato attratto dalla fotografia e cosi, durante l'adolescenza
+            inizio a fotografare, spinto sopratutto dalla volontà di esprimermi.
+            Questa mia passione mi ha portato a frequentare la triennale di
+            Fotografia a Firenze (LABA) e a capire che non voglio solo
+            esprimermi, ma anche cercare di raccontare il mondo che ci circonda.
           </p>
         </article>
       </div>
     </section>
+    <!-- CONTACT FORM =============================== -->
     <section class="form-section">
       <h1>Contatti</h1>
-      <form class="contact-form">
+      <form class="contact-form" action="https://formspree.io" method="POST">
         <label for="name">Nome:</label>
-        <input type="text" />
+        <input name="name" type="text"  required />
         <label for="email">Email:</label>
-        <input type="email" />
+        <input name=" _replyto" type="email"  required/>
         <label for="messagge">Messaggio:</label>
-        <textarea name="messagge" id="messagge" cols="30" rows="10"></textarea>
-        <button class="btn">Invia</button>
+        <textarea name="messagge" id="messagge" cols="30" rows="10" required></textarea>
+        <button class="btn" type="submit">Invia</button>
       </form>
     </section>
+    <!-- CONTACT FORM =============================== -->
 
     <!-- FOOTER -->
     <footer>
@@ -102,14 +125,42 @@
           </h2></a
         >
         <div class="icons-container">
-          <div class="icon"> <a href="https://www.instagram.com/ff98_ph/" target="_blank"> <i class="nav-icon fab fa-instagram"></i></a></div>
-          <div class="icon"><a href="mailto:federicofruzzettiph@gmail.com"> <i class="nav-icon far fa-envelope"></i></a></div>
+          <div class="icon">
+            <a href="https://www.instagram.com/ff98_ph/" target="_blank">
+              <i class="nav-icon fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <a href="mailto:federicofruzzettiph@gmail.com">
+              <i class="nav-icon far fa-envelope"></i
+            ></a>
+          </div>
         </div>
       </div>
     </footer>
     <!-- FOOTER -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="./scripts/app.js"></script>
+    <script src="./scripts/navbar.js"></script>
     <script src="./scripts/mobileMenu.js"></script>
   </body>
 </html>
+
+<!-- 
+            <form class="contact-form"
+  action="https://formspree.io/f/mdoygjoj"
+  method="POST"
+>
+ <label>
+    <input class="nameC" type="text" name="name" placeholder="Name">
+  </label>
+  <label>
+    
+    <input class="email" type="email" name="_replyto" placeholder="Email">
+  </label>
+  <label>
+    
+    <textarea class="message" name="message" placeholder="Your message"></textarea>
+  </label>
+
+  <button class="contact-btn" type="submit">Send</button>
+</form> -->

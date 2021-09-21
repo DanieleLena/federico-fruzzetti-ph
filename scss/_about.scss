@@ -46,6 +46,14 @@
 }
 
 .contact-form {
+    margin: auto;
+    // border: 1px solid white;
+    max-width: $max-width;
+    height: 500px;
+    padding: 5rem;
+    max-width: $max-width;
+    display: flex;
+    flex-direction: column;
     label {
         color: $custom-white;
     }
@@ -58,14 +66,6 @@
     textarea{
         height: 300px;
     }
-    margin: auto;
-    // border: 1px solid white;
-    max-width: $max-width;
-    height: 500px;
-    padding: 3rem;
-    max-width: $max-width;
-    display: flex;
-    flex-direction: column;
 }
 
 @media (max-width: $mq-small) {
