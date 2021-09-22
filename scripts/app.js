@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 // CUSTOM RIGHT CLICK MENU ===============================
+
 
 const images = document.querySelectorAll(".image");
 const menu = document.querySelector(".right-click-menu");
@@ -65,6 +67,9 @@ function openMenu(x, y) {
   menu.style.visibility = "visible";
 }
 
+
+
+
 // LIGHTBOX GALLERY ===========================================
 
 var lightbox = new SimpleLightbox(".main-container a", {
@@ -74,6 +79,7 @@ var lightbox = new SimpleLightbox(".main-container a", {
 });
 
 //LAZY LOADING WITH IntersectionObserver ======================
+
 
 const config = {
   rootMargin: "-100px 0px",
@@ -102,6 +108,7 @@ function preloadImage(url, target) {
     target.classList.add("fadein-animation");
   });
 }
+
 
 
 
