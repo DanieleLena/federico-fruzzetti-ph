@@ -24,7 +24,7 @@ function preloadImage(url, target) {
 
   target.addEventListener("load", () => {
     target.classList.add("fadein-animation");
-    console.log("caricata");
+
   });
 }
 

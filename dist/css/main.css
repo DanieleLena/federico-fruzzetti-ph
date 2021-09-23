@@ -223,7 +223,7 @@ p {
     padding: 1rem;
   }
   .contact-form {
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -491,9 +491,16 @@ figure.effect-lily:hover p {
   padding: 0 5rem;
 }
 
+.vertical-solo img {
+  width: 50%;
+}
+
 @media (max-width: 765px) {
   .project-title {
     width: 80%;
+  }
+  .vertical-solo img {
+    width: 100%;
   }
 }
 

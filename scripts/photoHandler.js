@@ -22,18 +22,13 @@ const lazyLoading = () => {
 
   images.forEach((image) => {
     observer.observe(image);
-
   });
 
   function onIntersection(entries) {
-
     entries.forEach((entry) => {
-        console.log(entry)
       if (entry.intersectionRatio > 0) {
-          console.log(entry.intersectionRatio);
-          console.log("intersect")
-          preloadImage(entry.target.dataset.srcset, entry.target);
-          observer.unobserve(entry.target);
+        preloadImage(entry.target.dataset.srcset, entry.target);
+        observer.unobserve(entry.target);
       }
     });
   }
