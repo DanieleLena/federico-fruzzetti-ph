@@ -3,8 +3,8 @@
 .project-body {
     
     // width: 50%;
-    padding: 5rem;
-    // height: 100vh;
+    // padding: 5rem;
+    min-height: 100vh;
   
     margin:$nav-bar-height auto 0 auto;
     padding-top: 3rem ;
@@ -39,15 +39,33 @@
             background-color: $custom-black;
         }
 }
-.horizzontal-img {
+// .horizzontal-img {
 
    
-}
-.vertical-img {
+// }
+// .vertical-img {
    
-}
+// }
 .side-by-side {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    gap: 5rem;
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.first-image-project {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 5rem;
+}
+
+@media (max-width: $mq-small) {
+    .project-title {
+        width: 80%;
+    }
 }

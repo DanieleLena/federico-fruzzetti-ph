@@ -434,7 +434,7 @@ figure.effect-lily:hover p {
 }
 
 .project-body {
-  padding: 5rem;
+  min-height: 100vh;
   margin: 50px auto 0 auto;
   padding-top: 3rem;
   text-align: center;
@@ -477,6 +477,24 @@ figure.effect-lily:hover p {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  gap: 5rem;
+}
+
+.side-by-side img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.first-image-project {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 5rem;
+}
+
+@media (max-width: 765px) {
+  .project-title {
+    width: 80%;
+  }
 }
 
 footer {
