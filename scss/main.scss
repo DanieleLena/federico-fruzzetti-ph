@@ -69,7 +69,7 @@ position: relative;
     position: relative;
     font-size: 2rem;
     list-style: none;
-    // text-transform: uppercase;
+    text-transform: capitalize;
     padding: 0 2rem;
     &:hover {
           color: $hover-color
@@ -225,15 +225,18 @@ grid-gap: $padding-page;
   .nav {
     background-color: $custom-white;
     padding: 0 1rem;
+    
   }
   .nav-list {
     display: none;
+    
   }
 
   .nav-icon {
     display: none !important;
   }
   .burger-icon {
+    font-size: 2.5rem;
     display: inline-block !important;
     z-index: 999;
   }
@@ -291,5 +294,18 @@ grid-gap: $padding-page;
 
   .main-container{
     padding: 1rem;
+  }
+
+}
+
+@media (max-width: 500px) {
+.images-horizontal {
+  gap: 2rem;
+}
+  .images-vertical {
+    height: 300px;
+    img {
+      height: 300px !important;
+    }
   }
 }

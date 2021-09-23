@@ -404,6 +404,9 @@ figure.effect-lily:hover p {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .projects-section {
+    min-height: 60vh;
+  }
   .effect-lily {
     margin: auto;
     width: 100%;
@@ -501,6 +504,9 @@ figure.effect-lily:hover p {
   }
   .vertical-solo img {
     width: 100%;
+  }
+  .side-by-side {
+    gap: 2rem;
   }
 }
 
@@ -652,6 +658,9 @@ footer {
     gap: 1rem;
     margin-bottom: 2rem;
   }
+  .footer-bottom h2 {
+    text-align: center;
+  }
 }
 
 body {
@@ -739,6 +748,7 @@ body {
   position: relative;
   font-size: 2rem;
   list-style: none;
+  text-transform: capitalize;
   padding: 0 2rem;
 }
 
@@ -934,6 +944,7 @@ body {
     display: none !important;
   }
   .burger-icon {
+    font-size: 2.5rem;
     display: inline-block !important;
     z-index: 999;
   }
@@ -1004,6 +1015,18 @@ body {
   }
   .main-container {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .images-horizontal {
+    gap: 2rem;
+  }
+  .images-vertical {
+    height: 300px;
+  }
+  .images-vertical img {
+    height: 300px !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

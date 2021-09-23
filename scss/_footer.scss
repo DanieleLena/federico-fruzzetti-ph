@@ -41,6 +41,7 @@ footer {
   z-index: 9999;
 }
 
+
 // MEDIA QUERY ======================================================================
 
 @media (min-width: $mq-medium) {
@@ -71,6 +72,7 @@ footer {
     align-items: center;
 
     h2 {
+     
       cursor: pointer;
       text-align: left;
       position: relative;
@@ -113,6 +115,11 @@ footer {
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
+}
+.footer-bottom {
+  h2{
+     text-align: center;
+  }
 }
   // .icon {
    
