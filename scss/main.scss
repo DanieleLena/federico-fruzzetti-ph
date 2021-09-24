@@ -168,6 +168,46 @@ box-shadow: 9px 5px 15px 4px rgba(0,0,0,0.82);
     }
   }
 }
+.images-row-trio{
+  width: 100%;
+  // min-height: 100vh;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  margin-bottom: $padding-page;
+  grid-gap: 5rem;
+
+  .images-horizontal{
+    width: 100%;
+
+  }
+  .images-vertical{
+          width: 100%;
+          height: 100%;
+
+  }
+
+
+  img {
+    z-index: 10;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    box-shadow: $shadow;
+    transition: box-shadow .5s ease-in-out;
+    //FOR FADE-IN ANIMATION
+    opacity: 0;
+
+
+    &:hover {
+      
+box-shadow: 9px 5px 15px 4px rgba(0,0,0,0.82);
+    }
+  }
+}
+
+  
 .full-width{
   justify-content: center;
 }
@@ -184,6 +224,7 @@ width: 48.5%;
 min-height: 1vh;
 
 display: grid;
+
 // grid-template-rows: 1fr 1fr;  
 grid-gap: $padding-page;
 
