@@ -231,6 +231,7 @@ p {
   margin-top: calc(60px + 20px);
   margin-bottom: 50px;
   width: 100%;
+  min-height: 60vh;
 }
 
 .projects-section h1 {
