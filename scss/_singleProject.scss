@@ -49,8 +49,10 @@
 .side-by-side {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 5rem;
+
+    
 
     img {
         width: 100%;
@@ -64,8 +66,10 @@
     padding: 0 5rem;
 }
 .vertical-solo{
+    text-align: center;
     img {
         width: 50%;
+        
     }
 }
 
@@ -74,6 +78,7 @@
         width: 80%;
     }
     .vertical-solo{
+        
     img {
         width: 100%;
     }
